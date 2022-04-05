@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/loadImage"
+        android:layout_width="136dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="120sp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#F1A995"
+        android:focusable="false"
+        android:text="Load Image"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="300dp" />f
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="364dp"
+        android:layout_height="152dp"
+        android:layout_marginBottom="10dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="132dp"
+        android:layout_marginTop="-9dp">
+
+        <LinearLayout
+            android:layout_width="45dp"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <android.widget.Button
+                android:id="@+id/filter8"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_grey"
+                android:focusable="false"
+                android:text="GreyScale"
+                android:textSize="10sp" />
+
+            <android.widget.Button
+                android:id="@+id/filter1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_blue"
+                android:focusable="false"
+                android:text="Invert"
+                android:textColor="#E6E2E2"
+                android:textSize="10sp" />
+
+            <android.widget.Button
+                android:id="@+id/filter5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_sepia"
+                android:focusable="false"
+                android:text="Sepia"
+                android:textSize="10sp" />
+
+            <android.widget.Button
+                android:id="@+id/filter3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_horiz"
+                android:focusable="false"
+                android:text="Horizontal Flip"
+                android:textSize="10sp" />
+
+            <android.widget.Button
+                android:id="@+id/filter4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_vert"
+                android:focusable="false"
+                android:text="Vertical Flip"
+                android:textSize="10sp" />
+
+            <android.widget.Button
+                android:id="@+id/filter6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_lightblue"
+                android:focusable="false"
+                android:text="Blue Tint"
+                android:textSize="10sp" />
+
+            <android.widget.Button
+                android:id="@+id/filter7"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_contrast"
+                android:focusable="false"
+                android:text="Contrast"
+                android:textColor="#1B1A1A"
+                android:textSize="10sp" />
+
+            <android.widget.Button
+                android:id="@+id/filter2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_saturation"
+                android:focusable="false"
+                android:text="Saturation"
+                android:textSize="10sp" />
+
+            <android.widget.Button
+                android:id="@+id/filter9"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_smooth"
+                android:focusable="false"
+                android:text="Smoothing"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/saveTitle"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginTop="10dp"
+        android:hint="Name of Your Image"
+        android:singleLine="true" />
+
+    <RadioGroup
+        android:id="@+id/saveFormat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:id="@+id/pngRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="1dp"
+            android:text="Save as PNG" />
+
+        <RadioButton
+            android:id="@+id/jpegRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Save as JPEG" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/saveFilterButton"
+        android:layout_width="136dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="200dp"
+        android:backgroundTint="#EA7994"
+        android:text="Save to Gallery"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="300dp" />
+
+</LinearLayout>
